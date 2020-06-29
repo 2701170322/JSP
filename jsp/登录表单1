@@ -1,0 +1,22 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录表单练习</title>
+    <link rel="stylesheet" href="登录表单练习.css">
+</head>
+<body>
+     <div class="box">
+     <form action="登录表单3.html" method="get">
+         <h1>Login</h1>
+
+         <div class="box-item">
+             <input  type="text" name="" placeholder="Username">
+            </div>
+
+         <div class="box-item">
+             <input   type="password" name="" placeholder="Password">
+           </div>
+         <input class="btn1" type="submit" name="" value="Login">
+         <a href="登录表单4.html">没有帐号？点击注册</a>
+     </form>
+     </div>
