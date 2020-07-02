@@ -13,7 +13,7 @@
 <body>
 <h2 align="center">商品列表</h2>
 <div align="center">
-    <form action="processbuy.jsp" method="post">
+    <form action="购买.jsp" method="post">
         <table border="0" cellspacing="30">
             <tr>
                 <th>商品名称</th>
