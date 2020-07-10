@@ -1,36 +1,29 @@
-    <div align="center">
-      <h2>结算</h2>
-      <%
-    	Map<String, Integer> map1 = (Map<String, Integer>)session.getAttribute("map1");
-      %>
-      	
-      	<table border="0" cellspacing="30">
-          <tr>
-            <th>商品名称</th>
-            <th>数量</th>
-            <th>总价</th>
-          </tr>
-          <tr>
-          	<td>笔记本</td>
-            <td><%=map1.get("笔记本") %></td>
-            <td><%=map1.get("笔记本") %>*5000</td>
-          </tr>
-          <tr>
-          	<td>汽车</td>
-            <td><%=map1.get("汽车")%></td>
-            <td><%=map1.get("汽车")%>*200000</td>
-          </tr>
-          <tr>
-          	<td>香水</td>
-            <td><%=map1.get("香水")%></td>
-            <td><%=map1.get("香水")%>*500</td>
-          </tr>
-          <tr>
-          	<td>书籍</td>
-            <td><%=map1.get("书籍") %></td>
-            <td><%=map1.get("书籍") %>*20</td>
-          </tr>
-		</table>
-		<p>总金额：<%=map1.get("笔记本")*5000+map1.get("汽车")*200000+map1.get("香水")*500+map1.get("书籍")*20 %></p>
-		<p><a href="buy.jsp">继续购买</a></p>
-    </div>
+<%@ page language="java" contentType="text/html; charset=GBK" pageEncoding="GBK"%>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>购物页面</title>
+</head>
+<body>
+<form action="" method="post" name="form">
+    这里是调料柜台，请选择要购买的调料：<br />
+    <input type="checkbox" name="sec" value="调和油" />调和油
+    <input type="checkbox" name="sec" value="强化盐" />强化盐
+    <input type="checkbox" name="sec" value="多维醋" />多维醋
+    <input type="checkbox" name="sec" value="绿色调料" />绿色调料<br />
+    <input type="submit" name="gouwu" value="购物">
+    <br />
+    <br />
+    <a href="loginID.jsp">欢迎修改会员卡号！</a>
+    <a href="count.jsp">欢迎查看购物车！</a>
+        <%
+	request.setCharacterEncoding("GB2312");
+	String sec[] = request.getParameterValues("sec");
+	if (sec!=null && sec.length!= 0) {
+	for (int i=0;i<sec.length;i++) {
+		session.setAttribute(sec[i],sec[i]);
+	}
+	}
+			%>
+</body>
+</html>
