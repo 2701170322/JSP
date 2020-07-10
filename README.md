@@ -8,25 +8,12 @@
 
 ### 实验三 简单购物车商城的实现
 
+- loginID.jsp;输入ID页面
 
-- buy.jsp
+- shop.jsp:超链接功能选择页面
 
-- 复选框写出可选商品。
+- food.jsp:购物页面
 
-- processbuy.jsp
-
-- 1、传入map，如果为空，则初始化为0
-
-- 2、获取选择的物品
-
-- 3、循环，置物品的购买数量
-
-- 4、把数量保存到session
-
-- 5、转发到show.jsp
-
-- show.jsp
-
-- 显示购买的物品数量，以及价格。
+- count.jsp:购物车页面
 
 
